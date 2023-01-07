@@ -1,0 +1,158 @@
+/**
+	Especificaciones CSS para el juego del solitario 
+*/
+
+
+/* /*** !!!!!!!!!!!!!!!!!!! CODIGO !!!!!!!!!!!!!!!!!!!! 
+	Completar los estilos que faltan y modificar al gusto del alumno
+**/
+
+
+/* Todos los contadores estarán ubicados en la parte inferior 
+   derecha (position absolute) de los respectivos tapetes (position relative).
+*/
+
+body {
+    height: 600px;
+    background-image: url("http://www.hcatalunyaexpress.com/wp-content/uploads/2017/11/cartas-de-poquer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contador {
+    position: absolute;
+    bottom: 0px;
+    right: 3px;
+}
+
+img.logo {
+    text-align: right;
+    position: relative;
+    height: 150px;
+}
+
+
+/* Centrado del título y color */
+
+h1#titulo {
+    text-align: right;
+    color: #140244;
+    background-color: rgba(238, 144, 225, 0.425);
+}
+
+
+/* Centrado de los marcadores de tiempo y movimientos */
+
+h2#marcadores {
+    text-align: center;
+    background-color: rgba(238, 144, 225, 0.575);
+}
+
+
+/* Mesa que contiene a los tapetes centrados */
+
+div#mesa {
+    text-align: center;
+    margin: 20px;
+}
+
+
+/* Todos los tapetes con position relative para que
+   los respectivos mazos (arrays de <img>) puedan
+   posicionarse de manera absoluta respecto a ellos */
+
+div.tapete {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+div.tapete#inicial_mazos {
+    text-align: left;
+    width: 180px;
+    height: 280px;
+    background-color: rgb(150, 22, 61);
+}
+
+
+/* Dimensiones y color de fondo para el tapete inicial */
+
+div.tapete#inicial {
+    text-align: left;
+    width: 340px;
+    height: 340px;
+    background-color: rgb(132, 133, 134);
+}
+
+
+/* Dimensiones para todos los tapetes salvo el inicial */
+
+div.tapete:not(#inicial,
+#inicial_mazos) {
+    height: 125px;
+    width: 100px;
+}
+
+
+/* Color de fondo para el tapete de las cartas sobrantes */
+
+div.tapete#sobrantes {
+    background-color: lightblue;
+}
+
+
+/* Color de fondo de los tapetes receptores */
+
+div.tapete.receptor {
+    background-color: rgb(238, 144, 225);
+}
+
+div.cabezera {
+    display: inline-block;
+    /*position: relative;
+    margin: 10px;*/
+}
+
+#sobrantes>img {
+    margin-top: 2px !important;
+    margin-left: -30px !important;
+    text-align: center;
+    height: 100px;
+    position: absolute;
+}
+
+#receptor1>img,
+#receptor2>img,
+#receptor3>img,
+#receptor4>img {
+    margin-top: 2px !important;
+    margin-left: -30px !important;
+    text-align: center;
+    height: 100px;
+    position: absolute;
+}
+
+img.inicial {
+    margin-top: 10px;
+    text-align: left;
+    height: 90px;
+    position: absolute;
+}
+
+img.cir,
+.cua {
+    text-align: left;
+    height: 50px;
+    position: absolute;
+}
+
+.ul {
+    position: absolute;
+    list-style: none;
+}
+
+#reset {
+    text-align: center;
+    position: relative;
+}
